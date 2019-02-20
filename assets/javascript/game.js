@@ -1,25 +1,27 @@
 
 $(document).ready(function() {
 
-    let wins=0
-    let loss=0 
+    var wins= 0;
+    var loss= 0
+    var userAmount= 0
+
 
     //Set the variables for each crystal 
 
-    let a=0;
-    let b=0;
-    let c=0;
-    let d=0;
+    var a=0;
+    var b=0;
+    var c=0;
+    var d=0;
     
     //random number, will add to it
 
 
     //Crystal numbers
-    let randomNumber;
-    let crystal1;
-    let crystal2;
-    let crystal3;
-    let crystal4;
+    var randomNumber;
+    var crystal1;
+    var crystal2;
+    var crystal3;
+    var crystal4;
     
 
     //Crystal generates a number function
@@ -38,68 +40,75 @@ $(document).ready(function() {
 
     $('#scoreboard').text(randomNumber)
 
+
     $('#btn1').click(function(){
         a = a+crystal1;
-        let f=a+b+c+d;
+        var f=a+b+c+d;
         $('#sum').text(f)
         if(f===randomNumber){
             $("#message").text('You won!')
-            wins++
+            wins++;
+            userAmount++;
+         
+
         }else if (f > randomNumber){
             $("#message").text('You lost')
-            loss--
+            loss--;
+            userAmount--;
+           
         }
-
     });
 
     $('#btn2').click(function(){
         b = b+crystal2;
-        let f=b+a+c+d;
+        var f=b+a+c+d;
         $('#sum').text(f)
         if(f===randomNumber){
             $("#message").text('You won!')
-            wins++
+            wins++;
+            
         }else if (f > randomNumber){
             $("#message").text('You lost')
-            loss--
+            loss--;
         }
-
     });
 
     $('#btn3').click(function(){
         c = c+crystal3;
-        let f=c+a+b+d;
+        var f=c+a+b+d;
         $('#sum').text(f)
         if(f===randomNumber){
             $("#message").text('You won!')
-            wins++
+            wins++;
+            
         }else if (f > randomNumber){
             $("#message").text('You lost')
-            loss--
+            loss--;
         }
-
     });
 
     $('#btn4').click(function(){
         d = d+crystal4;
-        let f=d+a+b+c;
+        var f=d+a+b+c;
         $('#sum').text(f)
         if(f===randomNumber){
             $("#message").text('You won!')
-            wins++
+            wins++;
+            
         }else if (f > randomNumber){
             $("#message").text('You lost')
-            loss--
+            loss--;
         }
-
     });
 
- //This is suppose to reset the game//
+// Pseudocoding this part //
 
+//This is suppose to reset the game//
     $("#reset").click(function(){
         randomNumber="";
         $('#scoreboard,#sum').empty()
     });
 
-    
+// I need the game to reset on its own and for the score to appear//
+
 });
