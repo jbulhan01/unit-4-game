@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Crystal Game</title>
+
+  <!-- Link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <!-- AND/OR YOUR OWN CSS -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+
+</head>
+
+<body>
+    <header class="row">
+        <header1 class="col-md-12" id="header1">
+            Crystal Collectors!
+        </header1>
+    </header>
+    <div class="row">
+        <div class="col-md-6">
+            <main class="instructions">
+                <p class="p">You will be given a random number at the start of the game</p>
+                <br>
+                <p class="p">There are four crystals below. By clicking on a crystal, you will add a specific amount of points to 
+                    your total score.
+                </p>
+                <br>
+                <p class="p">You win the game by matching your total score to the random number. You lose the game
+                    if your total score goes above the random number.
+                </p>
+                <br>
+                <p class="p">The value of each crystal is hidden from you until you click on it.</p>
+                <p class="p">Each time when the game starts, the game will change the value of each crystal.</p>
+            </main>
+        </div>
+    </div>
+
+    <div class="row">
+        <button id="randomize">Randomize</button>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div id="scoreboard">
+                
+
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div id="wins">Wins: 0</div>
+            <div id="losses">Losses: 0</div>
+            <div id="message"></div>
+        </div>
+
+        <div class="col-md-4">
+            <div id="totalscore">Your total score is:</div>
+            <div id="sum">0</div>
+        </div>
+        <div class="col-md-1">
+            <button id="reset">Reset</button>
+        </div>
+
+    </div>
+
+
+    <div id="userpick">
+        <button id="btn1"><img src="assets/images/Crystal1.png" alt="" class="Crystal1"></button>
+        <button id="btn2"><img src="assets/images/Crystal2.png" alt="" class="Crystal2"></button>
+        <button id="btn3"><img src="assets/images/Crystal3.png" alt="" class="Crystal3"></button>
+        <button id="btn4"><img src="assets/images/Crystal4.png" alt="" class="Crystal4"></button>
+        
+    </div>
+
+
+
+
+  <!-- Link to your JavaScript -->
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>
