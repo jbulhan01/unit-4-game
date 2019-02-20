@@ -1,6 +1,6 @@
 # unit-4-game
 
-- For this game you will be given a random number at the start of the game.
+-For this game you will be given a random number at the start of the game.
 
 -There are four crystals. By clicking on a crystal, you will add a specific amount to your total score. 
 
